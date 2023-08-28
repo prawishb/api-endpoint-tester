@@ -1,86 +1,69 @@
-# React + Vite + TypeScript Template (react-vite-ui)
+# API Endpoint Tester
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Dan5py/react-vite-ui/blob/main/LICENSE)
+API Endpoint Tester is a web application built using React, TypeScript, and Tailwind CSS that allows you to test API endpoints and observe their responses.
 
-A React + Vite template powered by shadcn/ui.
+![screenshot](screenshot.png) <!-- Replace with a screenshot of your app -->
 
-## 🎉 Features
+## Features
 
-- **React** - A JavaScript library for building user interfaces.
-- **Vite** - A fast, opinionated frontend build tool.
-- **TypeScript** - A typed superset of JavaScript that compiles to plain JavaScript.
-- **Tailwind CSS** - A utility-first CSS framework.
-- **Tailwind Prettier Plugin** - A Prettier plugin for formatting Tailwind CSS classes.
-- **ESLint** - A pluggable linting utility for JavaScript and TypeScript.
-- **PostCSS** - A tool for transforming CSS with JavaScript.
-- **Autoprefixer** - A PostCSS plugin to parse CSS and add vendor prefixes.
-- **shadcn/ui** - Beautifully designed components that you can copy and paste into your apps.
+- Send HTTP requests to API endpoints using various methods (GET, POST, PUT, DELETE, etc.).
+- View the responses in a user-friendly format.
+- Easily customizable request headers and payload.
+- Detailed error handling for failed requests.
+- Simple and intuitive user interface.
 
-## ⚙️ Prerequisites
+## Demo
 
-Make sure you have the following installed on your development machine:
+You can try out the [live demo](#) <!-- Replace with the URL of your live demo -->
 
-- Node.js (version 16 or above)
-- pnpm (package manager)
-
-## 🚀 Getting Started
-
-Follow these steps to get started with the react-vite-ui template:
+## Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/dan5py/react-vite-ui.git
+   git clone https://github.com/prawishb/api-endpoint-tester.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd react-vite-ui
+   cd api-endpoint-tester
    ```
 
 3. Install the dependencies:
 
    ```bash
-   pnpm install
+   npm install
    ```
 
-4. Start the development server:
+## Usage
+
+1. Start the development server:
 
    ```bash
-   pnpm dev
+   npm run dev
    ```
 
-## 📜 Available Scripts
+2. Open your web browser and navigate to http://localhost:3000 to access the API Endpoint Tester.
 
-- pnpm dev - Starts the development server.
-- pnpm build - Builds the production-ready code.
-- pnpm lint - Runs ESLint to analyze and lint the code.
-- pnpm preview - Starts the Vite development server in preview mode.
+3. Enter the API endpoint URL, choose the request method, customize headers and payload if needed, and click the "Send" button to see the response.
 
-## 📂 Project Structure
+## Contributing
 
-The project structure follows a standard React application layout:
+Contributions are welcome! If you find any issues or have suggestions, feel free to open an issue or submit a pull request.
 
-```python
-react-vite-ui/
-  ├── node_modules/      # Project dependencies
-  ├── public/            # Public assets
-  ├── src/               # Application source code
-  │   ├── components/    # React components
-  │   │   └── ui/        # shadc/ui components
-  │   ├── styles/        # CSS stylesheets
-  │   ├── lib/           # Utility functions
-  │   ├── App.tsx        # Application entry point
-  │   └── index.tsx      # Main rendering file
-  ├── .eslintrc.json     # ESLint configuration
-  ├── index.html         # HTML entry point
-  ├── postcss.config.js  # PostCSS configuration
-  ├── tailwind.config.js # Tailwind CSS configuration
-  ├── tsconfig.json      # TypeScript configuration
-  └── vite.config.ts     # Vite configuration
-```
+## License
 
-## 📄 License
+This project is licensed under the MIT License.
 
-This project is licensed under the MIT License. See the [LICENSE](https://choosealicense.com/licenses/mit/) file for details.
+## Acknowledgements
+
+- Built using React
+- Styled with Tailwind CSS
+
+## Contact
+
+For questions or inquiries, please contact:
+
+Prawish Biharie
+Email: biharieprawish@gmail.com
