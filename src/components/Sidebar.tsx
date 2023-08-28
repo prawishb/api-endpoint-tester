@@ -23,7 +23,11 @@ const Sidebar = ({ open, set }: Props) => {
         <div className="flex h-full min-h-0 w-full flex-col p-4">
           <div className="flex flex-row justify-between items-center">
             <h1 className="text-xl font-semibold">Collections</h1>
-            <Button variant="outline" className="px-2" onClick={sidebarHandler}>
+            <Button
+              variant="outline"
+              className="px-2 text-accent-foreground"
+              onClick={sidebarHandler}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

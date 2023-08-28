@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 
 import Request from "./components/Request";
 import Response from "./components/Response";
@@ -10,11 +11,25 @@ import { Input } from "./components/ui/input";
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState<boolean>(false);
 
+  const [apiEndpointUrl, setApiEndpointURL] = useState<string>("");
+  const [headers, setHeaders] = useState<KeyValue[]>([
+    {
+      id: uuidv4(),
+      key: "Content-Type",
+      value: "application/json",
+    },
+    {
+      id: uuidv4(),
+      key: "",
+      value: "",
+    },
+  ]);
+
   return (
-    <div className="bg-background antialiased min-h-screen flex">
+    <div className="bg-background antialiased min-h-screen flex dark">
       <Button
         variant="outline"
-        className="px-2 absolute top-4 left-4 z-10"
+        className="hidden sm:inline-block text-accent-foreground px-2 absolute top-4 left-4 z-10"
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
       >
         <svg
@@ -42,13 +57,19 @@ const App = () => {
             {/* TODO: add shadcn select */}
           </div>
 
-          <Input placeholder="https://www.example.com" />
+          <Input
+            className="text-foreground"
+            type="text"
+            placeholder="https://www.example.com"
+            value={apiEndpointUrl}
+            onChange={(event) => setApiEndpointURL(event.target.value)}
+          />
 
           <Button>Send</Button>
         </div>
 
-        <div className="w-full px-4 grid grid-cols-2 gap-4 flex-1">
-          <Request />
+        <div className="w-full px-4 grid grid-cols-1 sm:grid-cols-2 gap-4 flex-1">
+          <Request headers={headers} setHeaders={setHeaders} />
           <Response />
         </div>
       </main>

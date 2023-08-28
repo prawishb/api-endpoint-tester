@@ -22,7 +22,10 @@ const Response = (props: Props) => {
       <CardHeader className="p-4">
         <CardTitle>Response</CardTitle>
         <CardDescription>
-          Status: <span className="text-green-500 font-medium">200 OK</span>
+          Status:{" "}
+          <span className="text-green-500 font-medium">
+            {!isLoading && "200 OK"}
+          </span>
         </CardDescription>
       </CardHeader>
 
