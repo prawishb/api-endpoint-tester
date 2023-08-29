@@ -18,7 +18,7 @@ const Response = (props: Props) => {
   }, 2000);
 
   return (
-    <Card className="h-full flex flex-col">
+    <Card className="h-96 flex flex-col">
       <CardHeader className="p-4">
         <CardTitle>Response</CardTitle>
         <CardDescription>

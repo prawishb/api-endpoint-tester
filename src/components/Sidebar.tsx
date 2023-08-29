@@ -1,4 +1,12 @@
+import { useThemeContext } from "@/context/theme-context";
 import { Button } from "./ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@radix-ui/react-dropdown-menu";
+import { Sun, Moon } from "lucide-react";
 
 type Props = {
   open: boolean;
@@ -6,13 +14,15 @@ type Props = {
 };
 
 const Sidebar = ({ open, set }: Props) => {
+  const { setTheme } = useThemeContext();
+
   const sidebarHandler = () => {
     set(!open);
   };
 
   return (
     <aside
-      className="z-50 flex-shrink-0 overflow-x-hidden bg-background border-r transition-all duration-300"
+      className="bg-stone-200 dark:bg-stone-800 text-foreground z-50 flex-shrink-0 overflow-x-hidden max-h-screen bg-background border-r transition-all duration-300"
       style={
         open
           ? { width: "260px", visibility: "visible" }
@@ -51,6 +61,29 @@ const Sidebar = ({ open, set }: Props) => {
                 <ul></ul>
               </div>
             </div>
+          </div>
+
+          <div className="">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="icon">
+                  <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                  <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                  <span className="sr-only">Toggle theme</span>
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => setTheme("light")}>
+                  Light
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("dark")}>
+                  Dark
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme("system")}>
+                  System
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </div>
