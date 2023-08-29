@@ -1,7 +1,7 @@
 {
   "name": "api-endpoint-tester",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.2.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,8 +12,8 @@
   "dependencies": {
     "@radix-ui/react-select": "^1.2.2",
     "@radix-ui/react-slot": "^1.0.2",
-    "class-variance-authority": "^0.6.1",
-    "clsx": "^1.2.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
     "lucide-react": "^0.244.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,22 +21,23 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "@types/node": "^18.17.12",
-    "@types/react": "^18.0.37",
-    "@types/react-dom": "^18.0.11",
+    "@types/node": "^20.5.6",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
     "@types/uuid": "^9.0.2",
-    "@typescript-eslint/eslint-plugin": "^5.59.0",
-    "@typescript-eslint/parser": "^5.59.0",
-    "@vitejs/plugin-react": "^4.0.0",
-    "autoprefixer": "^10.4.14",
-    "eslint": "^8.38.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.15",
+    "eslint": "^8.47.0",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.3.4",
-    "postcss": "^8.4.24",
-    "prettier-plugin-tailwindcss": "0.2.5",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "postcss": "^8.4.28",
+    "prettier": "^3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.3",
     "tailwind-merge": "^1.14.0",
-    "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.2",
-    "vite": "^4.3.9"
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.5"
   }
 }
